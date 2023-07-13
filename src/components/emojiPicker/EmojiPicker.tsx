@@ -1,13 +1,10 @@
 import EmojiPickerContainer from "./EmojiPickerContainer";
 
-import { forwardRef, useState } from "react";
-
-interface EmojiPickerProps {
-  name: string;
-}
+import React, { ForwardedRef, forwardRef, useState, useEffect } from "react";
+import { useRef } from "react";
 
 export const EmojiPicker = (
-  { name }: EmojiPickerProps,
+  _: unknown,
   ref: ForwardedRef<HTMLInputElement | null>
 ) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -16,11 +13,20 @@ export const EmojiPicker = (
     setIsOpen(!isOpen);
   }
 
+  const containerRef = useRef<HTMLInputElement | null>(null);
+
+  useEffect(() => {
+    window.addEventListener("click", (e: MouseEvent) => {
+      if (!containerRef.current?.contains(e.target as HTMLElement)) {
+        setIsOpen(false);
+      }
+    });
+  }, []);
+
   return (
-    <div>
-      {name}
+    <div ref={containerRef} className="h-full">
       <button onClick={handleClickOpen}>🥳</button>
-      {isOpen ? <EmojiPickerContainer /> : "No abierto"}
+      {isOpen && <EmojiPickerContainer ref={ref} />}
     </div>
   );
 };
