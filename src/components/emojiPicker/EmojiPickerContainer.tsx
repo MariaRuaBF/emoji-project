@@ -39,9 +39,9 @@ export const EmojiPickerContainer = (
     ref.current.focus();
   }
   return (
-    <div>
-      <EmojiSearch onSearch={handleSearch} />
-      <div>
+    <div className="absolute w-96 h-80 border-solid border-2 border-white bg-[#222] flex flex-col p-4 box-border rounded-lg shadow-xl gap-4">
+      <EmojiSearch className="relative" onSearch={handleSearch} />
+      <div className=" flex gap-2 flex-wrap">
         {emojis.map((emoji) => (
           <EmojiButton
             key={emoji.symbol}

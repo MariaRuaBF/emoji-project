@@ -9,7 +9,14 @@ const EmojiButton = ({ emoji, onClick }: EmojiButtonProps) => {
   function handleClick() {
     onClick(emoji);
   }
-  return <button onClick={handleClick}>{emoji.symbol}</button>;
+  return (
+    <button
+      className="inline-block cursor-pointer hover:bg-white rounded-full"
+      onClick={handleClick}
+    >
+      {emoji.symbol}
+    </button>
+  );
 };
 
 export default EmojiButton;
