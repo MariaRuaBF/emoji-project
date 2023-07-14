@@ -24,7 +24,7 @@ export const EmojiPicker = (
   }, []);
 
   return (
-    <div ref={containerRef} className="h-full">
+    <div ref={containerRef} className="p-4">
       <button onClick={handleClickOpen}>🥳</button>
       {isOpen && <EmojiPickerContainer ref={ref} />}
     </div>
