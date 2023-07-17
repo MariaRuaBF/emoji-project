@@ -11,7 +11,7 @@ const EmojiButton = ({ emoji, onClick }: EmojiButtonProps) => {
   }
   return (
     <button
-      className="inline-block cursor-pointer hover:bg-white rounded-full"
+      className="inline-block p-[2px] cursor-pointer  hover:bg-pink-500/75 rounded-md"
       onClick={handleClick}
     >
       {emoji.symbol}

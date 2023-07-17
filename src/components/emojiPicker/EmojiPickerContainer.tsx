@@ -8,8 +8,8 @@ import { EmojiType } from "../../utils/types/EmojiType";
 import EmojiButton from "./EmojiButton";
 
 export const EmojiPickerContainer = (
-  props: any,
-  ref: ForwardedRef<HTMLInputElement | null>
+  _: undefined,
+  ref: React.MutableRefObject<HTMLInputElement | null>
 ) => {
   const [emojis, setEmojis] = useState<EmojiType[]>(emojiList);
 
@@ -29,19 +29,24 @@ export const EmojiPickerContainer = (
   }
 
   function handleOnClickEmoji(emoji: EmojiType) {
-    const cursorPosition: number | null = ref.current.selectionStart;
-    const text: string | null = ref.current.value;
-    const prev: string = text?.slice(0, cursorPosition);
-    const next: string = text?.slice(cursorPosition);
-    ref.current.value = prev + emoji.symbol + next;
-    ref.current.selectionStart = cursorPosition + emoji.symbol.length;
-    ref.current.selectionEnd = cursorPosition + emoji.symbol.length;
-    ref.current.focus();
+    const cursorPosition = ref.current?.selectionStart;
+    const text = ref.current?.value;
+    const prev = text && cursorPosition ? text.slice(0, cursorPosition) : "";
+    const next = text && cursorPosition ? text.slice(cursorPosition) : "";
+
+    ref.current && (ref.current.value = prev + emoji.symbol + next);
+    ref.current &&
+      (ref.current.selectionStart =
+        (cursorPosition ?? 0) + emoji.symbol.length);
+    ref.current &&
+      (ref.current.selectionEnd = (cursorPosition ?? 0) + emoji.symbol.length);
+    ref.current && ref.current.focus();
   }
   return (
-    <div className="absolute w-96 h-80 border-solid border-2 border-white bg-[#222] flex flex-col p-4 box-border rounded-lg shadow-xl gap-4">
-      <EmojiSearch className="relative" onSearch={handleSearch} />
-      <div className=" flex gap-2 flex-wrap">
+    <div className="absolute w-96 h-80 border-solid border-2 border-white bg-black opacity-75 flex flex-col p-4 box-border rounded-lg shadow-xl gap-4 ">
+      <EmojiSearch onSearch={handleSearch} />
+      <div className="text-white uppercase">Frequently used</div>
+      <div className=" flex gap-0.5 flex-wrap">
         {emojis.map((emoji) => (
           <EmojiButton
             key={emoji.symbol}

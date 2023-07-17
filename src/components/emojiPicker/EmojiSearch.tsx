@@ -7,7 +7,7 @@ interface EmojiSearchProps {
 const EmojiSearch = ({ onSearch }: EmojiSearchProps) => {
   return (
     <input
-      className="inline-flex p-2 rounded-md bg-white opacity-90"
+      className="relative inline-flex p-2 rounded-md bg-white"
       onChange={onSearch}
       placeholder="Busque aquí"
     />

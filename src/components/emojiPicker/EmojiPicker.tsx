@@ -1,11 +1,12 @@
 import EmojiPickerContainer from "./EmojiPickerContainer";
+import Emoji from "../../../public/emoji.svg";
 
-import React, { ForwardedRef, forwardRef, useState, useEffect } from "react";
+import React, { forwardRef, useState, useEffect } from "react";
 import { useRef } from "react";
 
 export const EmojiPicker = (
-  _: unknown,
-  ref: ForwardedRef<HTMLInputElement | null>
+  _: undefined,
+  ref: React.MutableRefObject<HTMLInputElement | null>
 ) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -24,8 +25,11 @@ export const EmojiPicker = (
   }, []);
 
   return (
-    <div ref={containerRef} className="p-4">
-      <button onClick={handleClickOpen}>🥳</button>
+    <div className="items-center" ref={containerRef}>
+      <button className="p-2" onClick={handleClickOpen}>
+        <img className="h-8" src={Emoji} alt="Icono emoji" />
+        {""}
+      </button>
       {isOpen && <EmojiPickerContainer ref={ref} />}
     </div>
   );
