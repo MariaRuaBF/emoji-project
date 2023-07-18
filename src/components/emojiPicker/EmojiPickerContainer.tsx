@@ -28,7 +28,7 @@ const EmojiPickerContainer = forwardRef<HTMLInputElement>((_, ref) => {
 
   useEffect(() => {
     const frequentlyUsedEmojisString =
-      sessionStorage.getItem("frequently emojis");
+      localStorage.getItem("frequently emojis");
     const frequentlyUsedEmojis: EmojiType[] | null =
       frequentlyUsedEmojisString !== null
         ? (JSON.parse(frequentlyUsedEmojisString) as EmojiType[])
@@ -41,7 +41,7 @@ const EmojiPickerContainer = forwardRef<HTMLInputElement>((_, ref) => {
 
   useEffect(() => {
     if (frequentlyEmojis.length !== 0) {
-      sessionStorage.setItem(
+      localStorage.setItem(
         "frequently emojis",
         JSON.stringify(frequentlyEmojis)
       );
