@@ -1,4 +1,4 @@
-import { useState, forwardRef } from "react";
+import { useState, forwardRef, useEffect } from "react";
 import { ChangeEvent } from "react";
 
 import { data as emojiList } from "./data.json";
@@ -26,6 +26,28 @@ const EmojiPickerContainer = forwardRef<HTMLInputElement>((_, ref) => {
     }
   }
 
+  useEffect(() => {
+    const frequentlyUsedEmojisString =
+      sessionStorage.getItem("frequently emojis");
+    const frequentlyUsedEmojis: EmojiType[] | null =
+      frequentlyUsedEmojisString !== null
+        ? (JSON.parse(frequentlyUsedEmojisString) as EmojiType[])
+        : null;
+    if (frequentlyUsedEmojis) {
+      setFrequentlyEmojis(frequentlyUsedEmojis);
+    }
+    return;
+  }, []);
+
+  useEffect(() => {
+    if (frequentlyEmojis.length !== 0) {
+      sessionStorage.setItem(
+        "frequently emojis",
+        JSON.stringify(frequentlyEmojis)
+      );
+    }
+  }, [frequentlyEmojis]);
+
   function handleOnClickEmoji(emoji: EmojiType) {
     if (ref && typeof ref !== "function" && ref.current) {
       const cursorPosition = ref.current.selectionStart || 0;
@@ -36,7 +58,8 @@ const EmojiPickerContainer = forwardRef<HTMLInputElement>((_, ref) => {
       ref.current.selectionStart = cursorPosition + emoji.symbol.length;
       ref.current.selectionEnd = cursorPosition + emoji.symbol.length;
       ref.current.focus();
-      if (!frequentlyEmojis.includes(emoji)) {
+
+      if (!frequentlyEmojis.some((item) => item.symbol == emoji.symbol)) {
         setFrequentlyEmojis([...frequentlyEmojis, emoji]);
       }
     }
@@ -57,14 +80,19 @@ const EmojiPickerContainer = forwardRef<HTMLInputElement>((_, ref) => {
           ))}
         </div>
       </div>
-      <div className="flex gap-0.5 flex-wrap">
-        {emojis.map((emoji) => (
-          <EmojiButton
-            key={emoji.symbol}
-            emoji={emoji}
-            onClick={handleOnClickEmoji}
-          />
-        ))}
+      <div>
+        <span className="text-white uppercase flex flex-col">
+          Smileys & people
+        </span>
+        <div className="flex gap-0.5 flex-wrap">
+          {emojis.map((emoji) => (
+            <EmojiButton
+              key={emoji.symbol}
+              emoji={emoji}
+              onClick={handleOnClickEmoji}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
