@@ -1,13 +1,10 @@
 import EmojiPickerContainer from "./EmojiPickerContainer";
 import Emoji from "../../../public/emoji.svg";
 
-import React, { forwardRef, useState, useEffect } from "react";
+import { forwardRef, useState, useEffect } from "react";
 import { useRef } from "react";
 
-export const EmojiPicker = (
-  _: undefined,
-  ref: React.MutableRefObject<HTMLInputElement | null>
-) => {
+const EmojiPicker = forwardRef<HTMLInputElement>((_, ref) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   function handleClickOpen() {
@@ -33,8 +30,6 @@ export const EmojiPicker = (
       {isOpen && <EmojiPickerContainer ref={ref} />}
     </div>
   );
-};
+});
 
-const ForwardedEmojiPicker = forwardRef<HTMLInputElement | null>(EmojiPicker);
-
-export default ForwardedEmojiPicker;
+export default EmojiPicker;
