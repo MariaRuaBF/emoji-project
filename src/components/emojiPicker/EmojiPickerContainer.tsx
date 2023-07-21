@@ -1,4 +1,4 @@
-import { useState, forwardRef, useEffect } from "react";
+import { useState, forwardRef, useEffect, useMemo } from "react";
 import { ChangeEvent } from "react";
 
 import { data as emojiList } from "./data.json";
@@ -33,13 +33,16 @@ const EmojiPickerContainer = forwardRef<HTMLInputElement>((_, ref) => {
     }
   }, [frequentlyEmojis]);
 
-  const categories: string[] = [];
-  emojiList.forEach((emoji: EmojiType) => {
-    const { category } = emoji;
-    if (!categories.includes(category)) {
-      categories.push(category);
-    }
-  });
+  const categories = useMemo(() => {
+    const array: string[] = [];
+    emojiList.forEach((emoji: EmojiType) => {
+      const { category } = emoji;
+      if (!array.includes(category)) {
+        array.push(category);
+      }
+    });
+    return array;
+  }, []);
 
   function handleSearch(e: ChangeEvent<HTMLInputElement>) {
     const query: string = e.target.value.toLowerCase();
