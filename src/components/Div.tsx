@@ -17,15 +17,6 @@ interface DivProps {
   onMouseOver?: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 }
 
-// Generics
-// function loggingIdentity<T, Z>(arg: T): Z {
-//   console.log(arg.length);
-//   return arg;
-// }
-
-// loggingIdentity<string[], string>([]);
-// loggingIdentity<number[], string>([]);
-
 export const Div: React.FC<DivProps> = ({
   children,
   id,
