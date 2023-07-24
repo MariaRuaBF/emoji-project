@@ -13,7 +13,7 @@ interface ImgProps {
   onLoad?: (e: React.SyntheticEvent<HTMLImageElement, Event>) => void;
 }
 
-const Img: React.FC<ImgProps> = ({
+export const Img: React.FC<ImgProps> = ({
   alt,
   height,
   loading,
@@ -44,5 +44,3 @@ const Img: React.FC<ImgProps> = ({
     />
   );
 };
-
-export default Img;
