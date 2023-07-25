@@ -1,4 +1,4 @@
-import { useState, forwardRef, useEffect, useMemo } from "react";
+import { useState, forwardRef, useEffect, useMemo, useRef } from "react";
 import { ChangeEvent } from "react";
 
 import { data as emojiList } from "./data.json";
@@ -7,9 +7,26 @@ import EmojiSearch from "./EmojiSearch";
 import { EmojiType } from "../../utils/types/EmojiType";
 import EmojiButton from "./EmojiButton";
 
-const EmojiPickerContainer = forwardRef<HTMLInputElement>((_, ref) => {
+import { useOnClickOutside } from "../../hooks/useOnClickOuside";
+
+interface EmojiPickerContainerProps {
+  setIsOpen: (isOpen: boolean) => void;
+}
+
+export const EmojiPickerContainer = forwardRef<
+  HTMLInputElement | null,
+  EmojiPickerContainerProps
+>(({ setIsOpen }, ref) => {
   const [emojis, setEmojis] = useState<EmojiType[]>(emojiList);
   const [frequentlyEmojis, setFrequentlyEmojis] = useState<EmojiType[]>([]);
+
+  const clickOutsideHandler = () => {
+    setIsOpen(false);
+  };
+
+  const containerRef = useRef<HTMLInputElement | null>(null);
+
+  useOnClickOutside(containerRef, clickOutsideHandler);
 
   useEffect(() => {
     const frequentlyUsedEmojisString =
@@ -81,7 +98,10 @@ const EmojiPickerContainer = forwardRef<HTMLInputElement>((_, ref) => {
   }
 
   return (
-    <div className="absolute w-96 h-80 border-solid border-2 border-white bg-black opacity-75 flex flex-col p-4 box-border rounded-lg shadow-xl ">
+    <div
+      className="absolute w-96 h-80 border-solid border-2 border-white bg-black opacity-75 flex flex-col p-4 box-border rounded-lg shadow-xl "
+      ref={containerRef}
+    >
       <EmojiSearch onSearch={handleSearch} />
       <div className="w-fit overflow-scroll py-2 scroll-smooth ">
         <div className="text-white uppercase flex flex-col">
@@ -118,5 +138,3 @@ const EmojiPickerContainer = forwardRef<HTMLInputElement>((_, ref) => {
     </div>
   );
 });
-
-export default EmojiPickerContainer;
