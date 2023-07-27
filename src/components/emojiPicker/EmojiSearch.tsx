@@ -6,12 +6,13 @@ interface EmojiSearchProps {
 
 const EmojiSearch = ({ onSearch }: EmojiSearchProps) => {
   return (
-    <input
-      className="relative inline-flex p-2 rounded-md bg-white"
-      onChange={onSearch}
-      placeholder="Busque aquí"
-    />
+    <div className="bg-black w-full">
+      <input
+        className="w-full inline-flex p-2 rounded-md bg-white"
+        onChange={onSearch}
+        placeholder="Busque aquí"
+      />
+    </div>
   );
 };
-
 export default EmojiSearch;

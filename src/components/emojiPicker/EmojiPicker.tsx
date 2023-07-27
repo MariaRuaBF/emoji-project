@@ -1,35 +1,37 @@
-import EmojiPickerContainer from "./EmojiPickerContainer";
-import Emoji from "../../../public/emoji.svg";
+import { EmojiPickerContainer } from "./EmojiPickerContainer";
+import { useState, useEffect, useRef } from "react";
+import { PiSmileyFill, PiSmileyXEyesFill } from "react-icons/pi";
 
-import { forwardRef, useState, useEffect } from "react";
-import { useRef } from "react";
+export const EmojiPicker = () => {
+  const ref = useRef<HTMLInputElement | null>(null);
 
-const EmojiPicker = forwardRef<HTMLInputElement>((_, ref) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  function handleClickOpen() {
+  const handleClickOpen = () => {
     setIsOpen(!isOpen);
-  }
-
-  const containerRef = useRef<HTMLInputElement | null>(null);
-
-  useEffect(() => {
-    window.addEventListener("click", (e: MouseEvent) => {
-      if (!containerRef.current?.contains(e.target as HTMLElement)) {
-        setIsOpen(false);
-      }
-    });
-  }, []);
+  };
 
   return (
-    <div className="items-center" ref={containerRef}>
-      <button className="p-2" onClick={handleClickOpen}>
-        <img className="h-8" src={Emoji} alt="Icono emoji" />
-        {""}
-      </button>
-      {isOpen && <EmojiPickerContainer ref={ref} />}
+    <div className="flex items-center justify-between border-solid border-2 p-2 pl-0 gap-2 border-gray-400 rounded-lg w-1/5">
+      <input className="w-full px-10 focus:outline-none " ref={ref} />
+      <div className="items-center">
+        <button className="p-2" onClick={handleClickOpen}>
+          {isOpen ? (
+            <PiSmileyXEyesFill
+              id="hola1"
+              size="24px"
+              style={{ color: "rgb(236 72 153)" }}
+            />
+          ) : (
+            <PiSmileyFill
+              id="hola1"
+              size="24px"
+              style={{ color: "rgb(236 72 153)" }}
+            />
+          )}
+        </button>
+        {isOpen && <EmojiPickerContainer setIsOpen={setIsOpen} ref={ref} />}
+      </div>
     </div>
   );
-});
-
-export default EmojiPicker;
+};

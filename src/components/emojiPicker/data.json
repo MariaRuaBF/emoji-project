@@ -3,167 +3,644 @@
         {
             "symbol": "😀",
             "name": "grinning face",
+            "category": "Smileys & People",
             "keywords": "smiling face happy smileys & people"
         },
         {
             "symbol": "🥹",
             "name": "smiling face holding back tears",
+            "category": "Smileys & People",
             "keywords": "smiling face holding back tears smileys & people"
         },
         {
             "symbol": "🤣",
             "name": "rolling on the floor laughing face",
+            "category": "Smileys & People",
             "keywords": "rolling on the floor laughing face smileys & people"
         },
         {
             "symbol": "😍",
             "name": "smiling face with heart-eye",
+            "category": "Smileys & People",
             "keywords": "smiling face with heart-eye smileys & people"
         },
         {
             "symbol": "🧐",
             "name": "face with monocle",
+            "category": "Smileys & People",
             "keywords": "face with monocle smileys & people"
         },
         {
             "symbol": "🤓",
             "name": "smiling face with glasses",
+            "category": "Smileys & People",
             "keywords": "smiling face with glasses"
         },
         {
             "symbol": "🥸",
             "name": "disguised face",
+            "category": "Smileys & People",
             "keywords": "disguised face glasses"
         },
         {
             "symbol": "😫",
             "name": "distraught face",
+            "category": "Smileys & People",
             "keywords": "distraught face"
         },
         {
             "symbol": "😭",
             "name": "loudly crying face",
+            "category": "Smileys & People",
             "keywords": "loudly crying face"
         },
         {
             "symbol": "😤",
             "name": "face with steam from nose",
+            "category": "Smileys & People",
             "keywords": "face with steam from nose"
         },
         {
             "symbol": "🥶",
             "name": "cold face",
+            "category": "Smileys & People",
             "keywords": "cold face"
         },
         {
             "symbol": "🫠",
             "name": "melting face",
+            "category": "Smileys & People",
             "keywords": "melting face"
         },
         {
             "symbol": "🤥",
             "name": "lying face",
+            "category": "Smileys & People",
             "keywords": "lying face"
         },
         {
             "symbol": "💩",
             "name": "pile of poop",
+            "category": "Smileys & People",
             "keywords": "pile of poop"
         },
         {
             "symbol": "👽",
             "name": "alien",
+            "category": "Smileys & People",
             "keywords": "alien"
         },
         {
             "symbol": "🤖",
             "name": "robot face",
+            "category": "Smileys & People",
             "keywords": "robot face"
         },
         {
             "symbol": "🎃",
             "name": "jack-o-lantern",
+            "category": "Smileys & People",
             "keywords": "jack-o-lantern"
         },
         {
             "symbol": "🦷",
             "name": "tooth",
+            "category": "Smileys & People",
             "keywords": "tooth"
         },
         {
             "symbol": "👅",
             "name": "tongue",
+            "category": "Smileys & People",
             "keywords": "tongue"
         },
         {
             "symbol": "🫁",
             "name": "lungs",
+            "category": "Smileys & People",
             "keywords": "lungs"
         },
         {
             "symbol": "🧠",
             "name": "brain",
+            "category": "Smileys & People",
             "keywords": "brain"
         },
         {
             "symbol": "🐽",
             "name": "pig nose",
+            "category": "Animals & Nature",
             "keywords": "pig nose"
         },
         {
             "symbol": "🐷",
             "name": "pig face",
+            "category": "Animals & Nature",
             "keywords": "pig face"
         },
         {
             "symbol": "🐸",
             "name": "frog face",
+            "category": "Animals & Nature",
             "keywords": "frog face"
         },
         {
             "symbol": "🐧",
             "name": "penguin",
+            "category": "Animals & Nature",
             "keywords": "penguin"
         },
         {
             "symbol": "🦉",
             "name": "owl",
+            "category": "Animals & Nature",
             "keywords": "owl"
         },
         {
             "symbol": "🐝",
             "name": "bee",
+            "category": "Animals & Nature",
             "keywords": "bee"
         },
         {
             "symbol": "🌏",
             "name": "globe showing Asia and Australia",
+            "category": "Animals & Nature",
             "keywords": "globe showing Asia and Australia"
         },
         {
             "symbol": "⭐️",
             "name": "star",
+            "category": "Animals & Nature",
             "keywords": "star"
         },
         {
             "symbol": "⚡️",
             "name": "lightning bolt",
+            "category": "Animals & Nature",
             "keywords": "lightning bolt"
         },
         {
             "symbol": "🫐",
             "name": "blueberries",
+            "category": "Food & Drink",
             "keywords": "blueberries"
         },
         {
             "symbol": "🥭",
             "name": "mango",
+            "category": "Food & Drink",
             "keywords": "mango"
         },
         {
             "symbol": "🍑",
             "name": "peach",
+            "category": "Food & Drink",
             "keywords": "peach"
+        },
+        {
+            "symbol": "🍕",
+            "name": "pizza",
+            "category": "Food & Drink",
+            "keywords": "pizza"
+        },
+        {
+            "symbol": "🍗",
+            "name": "poultry leg",
+            "category": "Food & Drink",
+            "keywords": "poultry leg"
+        },
+        {
+            "symbol": "🥙",
+            "name": "pita sandwich",
+            "category": "Food & Drink",
+            "keywords": "pita sandwich"
+        },
+        {
+            "symbol": "🍫",
+            "name": "chocolate bar",
+            "category": "Food & Drink",
+            "keywords": "chocolate bar"
+        },
+        {
+            "symbol": "🤸‍♂️",
+            "name": "man doing a cartwheel",
+            "category": "Activity",
+            "keywords": "man doing a cartwheel"
+        },
+        {
+            "symbol": "🤺",
+            "name": "fencer",
+            "category": "Activity",
+            "keywords": "fencer"
+        },
+        {
+            "symbol": "🛝",
+            "name": "playground slide",
+            "category": "Activity",
+            "keywords": "playground slide"
+        },
+        {
+            "symbol": "🛹",
+            "name": "skateboard",
+            "category": "Activity",
+            "keywords": "skateboard"
+        },
+        {
+            "symbol": "🏄‍♀️",
+            "name": "woman surfer",
+            "category": "Activity",
+            "keywords": "woman surfer"
+        },
+        {
+            "symbol": "🎟️",
+            "name": "admission ticket",
+            "category": "Activity",
+            "keywords": "admission ticket"
+        },
+        {
+            "symbol": "🩰",
+            "name": "ballet shoes",
+            "category": "Activity",
+            "keywords": "ballet shoes"
+        },
+        {
+            "symbol": "🎲",
+            "name": "game die",
+            "category": "Activity",
+            "keywords": "game die"
+        },
+        {
+            "symbol": "🚜",
+            "name": "tractor",
+            "category": "Travel & Places",
+            "keywords": "tractor"
+        },
+        {
+            "symbol": "🩼",
+            "name": "crutch",
+            "category": "Travel & Places",
+            "keywords": "crutch"
+        },
+        {
+            "symbol": "🚨",
+            "name": "police car’s light",
+            "category": "Travel & Places",
+            "keywords": "police car’s light"
+        },
+        {
+            "symbol": "🚝",
+            "name": "monorail",
+            "category": "Travel & Places",
+            "keywords": "monorail"
+        },
+        {
+            "symbol": "🛫",
+            "name": "airplane taking off",
+            "category": "Travel & Places",
+            "keywords": "airplane taking off"
+        },
+        {
+            "symbol": "🚁",
+            "name": "helicopter",
+            "category": "Travel & Places",
+            "keywords": "helicopter"
+        },
+        {
+            "symbol": "🚦",
+            "name": "vertical traffic light",
+            "category": "Travel & Places",
+            "keywords": "vertical traffic light"
+        },
+        {
+            "symbol": "🗽",
+            "name": "Statue of Liberty",
+            "category": "Travel & Places",
+            "keywords": "Statue of Liberty"
+        },
+        {
+            "symbol": "🗿",
+            "name": "Easter Island statue",
+            "category": "Objects",
+            "keywords": "Easter Island statue"
+        },
+        {
+            "symbol": "💿",
+            "name": "cd",
+            "category": "Objects",
+            "keywords": "cd"
+        },
+        {
+            "symbol": "📸",
+            "name": "camera with flash",
+            "category": "Objects",
+            "keywords": "camera with flash"
+        },
+        {
+            "symbol": "📷",
+            "name": "camera",
+            "category": "Objects",
+            "keywords": "camera"
+        },
+        {
+            "symbol": "⏳",
+            "name": "hourglass with flowing sand",
+            "category": "Objects",
+            "keywords": "hourglass with flowing sand"
+        },
+        {
+            "symbol": "🔌",
+            "name": "electric plug",
+            "category": "Objects",
+            "keywords": "electric plug"
+        },
+        {
+            "symbol": "💶",
+            "name": "euro banknotes",
+            "category": "Objects",
+            "keywords": "euro banknotes"
+        },
+        {
+            "symbol": "🕯️",
+            "name": "candle",
+            "category": "Objects",
+            "keywords": "candle"
+        },
+        {
+            "symbol": "⚖️",
+            "name": "scales",
+            "category": "Objects",
+            "keywords": "scales"
+        },
+        {
+            "symbol": "🔫",
+            "name": "water pistol",
+            "category": "Objects",
+            "keywords": "water pistol"
+        },
+        {
+            "symbol": "💣",
+            "name": "bomb",
+            "category": "Objects",
+            "keywords": "bomb"
+        },
+        {
+            "symbol": "⚰️",
+            "name": "coffin",
+            "category": "Objects",
+            "keywords": "coffin"
+        },
+        {
+            "symbol": "🔮",
+            "name": "crystal ball",
+            "category": "Objects",
+            "keywords": "crystal ball"
+        },
+        {
+            "symbol": "🕎",
+            "name": "menorah",
+            "category": "Objects",
+            "keywords": "menorah"
+        },
+        {
+            "symbol": "☮️",
+            "name": "peace symbol",
+            "category": "Objects",
+            "keywords": "peace symbol"
+        },
+        {
+            "symbol": "🩷",
+            "name": "pink heart",
+            "category": "Symbols",
+            "keywords": "pink heart"
+        },
+        {
+            "symbol": "🖤",
+            "name": "black heart",
+            "category": "Symbols",
+            "keywords": "black heart"
+        },
+        {
+            "symbol": "🆚",
+            "name": "squared vs",
+            "category": "Symbols",
+            "keywords": "squared vs"
+        },
+        {
+            "symbol": "🆑",
+            "name": "CL sign",
+            "category": "Symbols",
+            "keywords": "CL sign"
+        },
+        {
+            "symbol": "🚫",
+            "name": "prohibited",
+            "category": "Symbols",
+            "keywords": "prohibited"
+        },
+        {
+            "symbol": "✝️",
+            "name": "Latin cross",
+            "category": "Symbols",
+            "keywords": "Latin cross"
+        },
+        {
+            "symbol": "💟",
+            "name": "heart decoration",
+            "category": "Symbols",
+            "keywords": "heart decoration"
+        },
+        {
+            "symbol": "✅",
+            "name": "check mark symbol",
+            "category": "Symbols",
+            "keywords": "check mark symbol"
+        },
+        {
+            "symbol": "🅿️",
+            "name": "parking sign",
+            "category": "Symbols",
+            "keywords": "parking sign"
+        },
+        {
+            "symbol": "♿️",
+            "name": "wheelchair symbol",
+            "category": "Symbols",
+            "keywords": "wheelchair symbol"
+        },
+        {
+            "symbol": "🎦",
+            "name": "cinema symbol",
+            "category": "Symbols",
+            "keywords": "cinema symbol"
+        },
+        {
+            "symbol": "🔄",
+            "name": "counterclockwise arrows",
+            "category": "Symbols",
+            "keywords": "counterclockwise arrows"
+        },
+        {
+            "symbol": "🎵",
+            "name": "musical note",
+            "category": "Symbols",
+            "keywords": "musical note"
+        },
+        {
+            "symbol": "🎶",
+            "name": "musical notes",
+            "category": "Symbols",
+            "keywords": "musical notes"
+        },
+        {
+            "symbol": "🔙",
+            "name": "back arrow",
+            "category": "Symbols",
+            "keywords": "back arrow"
+        },
+        {
+            "symbol": "🟣",
+            "name": "purple circle",
+            "category": "Symbols",
+            "keywords": "purple circle"
+        },
+        {
+            "symbol": "⚫️",
+            "name": "black circle",
+            "category": "Symbols",
+            "keywords": "black circle"
+        },
+        {
+            "symbol": "⚪️",
+            "name": "white circle",
+            "category": "Symbols",
+            "keywords": "white circle"
+        },
+        {
+            "symbol": "🔈",
+            "name": "speaker",
+            "category": "Symbols",
+            "keywords": "speaker"
+        },
+        {
+            "symbol": "🕛",
+            "name": "twelve o clock",
+            "category": "Symbols",
+            "keywords": "twelve o clock"
+        },
+        {
+            "symbol": "🏳️",
+            "name": "white flag",
+            "category": "Symbols",
+            "keywords": "white flag"
+        },
+        {
+            "symbol": "🏴",
+            "name": "black flag",
+            "category": "Symbols",
+            "keywords": "black flag"
+        },
+        {
+            "symbol": "🏴‍☠️",
+            "name": "pirate flag",
+            "category": "Symbols",
+            "keywords": "pirate flag"
+        },
+        {
+            "symbol": "🏁",
+            "name": "chequered flag",
+            "category": "Symbols",
+            "keywords": "chequered flag"
+        },
+        {
+            "symbol": "🚩",
+            "name": "triangular flag on post",
+            "category": "Symbols",
+            "keywords": "triangular flag on post"
+        },
+        {
+            "symbol": "❤️‍🩹",
+            "name": "mending heart",
+            "category": "Symbols",
+            "keywords": "mending heart"
+        },
+        {
+            "symbol": "❤️‍🔥",
+            "name": "heart on fire",
+            "category": "Symbols",
+            "keywords": "heart on fire"
+        },
+        {
+            "symbol": "💔",
+            "name": "broken heart",
+            "category": "Symbols",
+            "keywords": "broken heart"
+        },
+        {
+            "symbol": "💗",
+            "name": "growing heart",
+            "category": "Symbols",
+            "keywords": "growing heart"
+        },
+        {
+            "symbol": "💘",
+            "name": "heart with arrow",
+            "category": "Symbols",
+            "keywords": "heart with arrow"
+        },
+        {
+            "symbol": "💝",
+            "name": "heart with ribbon",
+            "category": "Symbols",
+            "keywords": "heart with ribbon"
+        },
+        {
+            "symbol": "🕉️",
+            "name": "om symbol",
+            "category": "Symbols",
+            "keywords": "om symbol"
+        },
+        {
+            "symbol": "💮",
+            "name": "white flower",
+            "category": "Symbols",
+            "keywords": "white flower"
+        },
+        {
+            "symbol": "📛",
+            "name": "name badge",
+            "category": "Symbols",
+            "keywords": "name badge"
+        },
+        {
+            "symbol": "🔞",
+            "name": "no one under eighteen",
+            "category": "Symbols",
+            "keywords": "no one under eighteen"
+        },
+        {
+            "symbol": "🚳",
+            "name": "no bicycles",
+            "category": "Symbols",
+            "keywords": "no bicycles"
+        },
+        {
+            "symbol": "🚯",
+            "name": "no littering",
+            "category": "Symbols",
+            "keywords": "no littering"
+        },
+        {
+            "symbol": "💢",
+            "name": "anger symbol",
+            "category": "Symbols",
+            "keywords": "anger symbol"
+        },
+        {
+            "symbol": "💯",
+            "name": "hundred points symbol",
+            "category": "Symbols",
+            "keywords": "hundred points symbol"
         }
     ]
 }
